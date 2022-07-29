@@ -16,7 +16,7 @@
 <body>
 
     <div class="gnb">
-		<div data-aos ="fade=up" >
+		<div data-aos ="fade=up">
 		
 			<div class="gnbWrap">
 				<h1 class = "topLogo"> <a href="">hilton hotel</a></h1>
@@ -24,15 +24,10 @@
 					<ul class = "gnbDepth1">
 						<li>
 							<a href="">specitial offer</a>
-
-							<div class="data-aos" data-aos-duration="1000">
-								<ul class="gnbDepth2-List">
+							<ul class="gnbDepth2-List">
 								<li><a href="">이벤트</a></li>
 								<li><a href="">패키지</a></li>
 							</ul>
-							</div>	
-
-
 						</li>
 
 						<li>
