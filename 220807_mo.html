@@ -1,0 +1,576 @@
+<!-- #include virtual = "/renewal2021/m/inc/head.asp"-->
+
+
+<style>
+/* ----------------- 아카데미 소개 ----------------- */
+/* 언론보도 */
+.pressCont img {width:100% !important; padding:15px 0}
+
+/* 코리아IT소개 페이지 */
+.page-desc {padding: 0 3px; font-weight: 200; font-size: 20px; line-height: 1.3; letter-spacing: -0.06em; word-break: keep-all;}
+.page-desc br {display: none;}
+
+.centerinfoTop {padding-top: 0px; background: url('/renewal2021/m/img/academy/centerinfo_top_02.png') no-repeat center; color: #1b1b1b; letter-spacing: -0.07em; padding-bottom: 0px; word-break: keep-all;}
+
+h2.blue-border {display: inline-block; padding: 0 10px; position: relative; font-size: 32px; font-weight: 1000;}
+h2.blue-border:after {content:''; position: absolute; z-index: -1; bottom: 5px; left: 0; width: 100%; height: 7px; background: #004eff; -webkit-animation-name: widthResize; animation-name: widthResize; -webkit-animation-duration: 0.7s; animation-duration: 0.7s; -webkit-animation-delay: 0s; animation-delay: 0s;}
+
+.centerinfoTop h2{font-weight: 1500;}
+.centerinfoTop .centerinfoTopTexts{position: relative; color: #fff; padding-top: 60px; width: 90%; margin: 0 auto;}
+.centerinfoTop .centerinfoTopTexts h2{font-size: 28px;}
+.centerinfoTop .centerinfoTopTexts h4{font-size: 11px; letter-spacing: 12px; padding: 25px 0px; color: #ddd; font-weight: 0; opacity: 0.5;}
+.centerinfoTop .centerinfoTopTexts p{font-size: 12px; color: #fff; font-weight: 0; line-height: 23px; opacity: 0.8;}
+
+@keyframes widthResize{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+@-webkit-keyframes widthResize{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.secList {letter-spacing: -0.07em; padding-bottom: 10px; word-break: keep-all;}
+.secDesc h3 {font-weight: 800; font-size: 30px; color: #1b1b1b; line-height: 1.2; letter-spacing: -0.07em;}
+.secDesc h4 {margin-top: 10px; font-size: 20px; line-height: 20px; font-weight: 700;}
+.secDesc p {font-weight: 200; font-size: 16px; color: #2f2f30; line-height: 1.5; letter-spacing: -0.075em;}
+.secList .secDesc p {margin-top: 20px; padding-left: 0px; font-size: 13px;}
+.blue-bg {background: #00cae2;}
+
+.info-subLink{width: 100%; height: 70px;}
+.info-subLink ul{text-align: center;  display: flex; /* justify-content: space-between; */ flex-wrap: nowrap; overflow: visible;  overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; white-space: normal; -webkit-overflow-scrolling: touch;}
+.info-subLink ul::-webkit-scrollbar{display:none;}
+.info-subLink ul li{text-align: center; font-size: 12px; margin: 0 3px; background-color: #eeeeee; height: 30px; border-radius: 20px; color: #666; white-space:nowrap;}
+.info-subLink ul li .linkWrap {text-align: center; width: 100%; position: relative;}
+.info-subLinkBtn{position: relative; transition: all .5s;}
+.info-subLinkBtn:hover{ color: #004eff;}
+.info-subLink ul li .linkWrap a{display: block; width: 100%; line-height: 30px; padding: 0 8px;}
+.info-subLinkBtn::before { content: '';position: absolute;bottom: 5px;left: 0px;width: 100%;height: 1px;background: #004eff;display: block;-webkit-transform-origin: right top;-ms-transform-origin: right top;transform-origin: right top;-webkit-transform: scale(0, 1);-ms-transform: scale(0, 1);transform: scale(0, 1);-webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);transition: transform 0.4s cubic-bezier(1, 0, 0, 1);}
+.info-subLinkBtn:hover::before {-webkit-transform-origin: left top;-ms-transform-origin: left top;transform-origin: left top;-webkit-transform: scale(1, 1);-ms-transform: scale(1, 1);transform: scale(1, 1); }
+
+.sub-Info-Count h2{font-size: 20px; color: #999999; }
+.sub-Info-Count h2 span{font-size: 28px; font-weight: 1000;}
+.Count-Texts h3{font-weight: 1500; font-size: 125px;}
+.sub-Info-Count .count-Texts{display: flex; justify-content: space-between; text-align: center; }
+.sub-Info-Count .count-Texts .cntText{width: 32%; background-color: #eeeeee; padding: 10px; margin-top: 20px; border-radius: 10px;}
+.sub-Info-Count .count-Texts .cntText h3{font-size: 29px; font-weight: 1000;}
+.sub-Info-Count .count-Texts .cntText p{font-size: 13px; line-height: 20px;}
+.sub-Info-Count .count-Texts .cntText .infoSmall{font-size: 10px;}
+
+.sub-Info-Grow h2{font-size: 28px; font-weight: 1000;}
+.sub-Info-Grow .infoArtBox{ margin-top: 55px;}
+.sub-Info-Grow .infoArtBox article {width: 100%; display: flex; justify-content: space-between; margin-top: 30px;}
+.sub-Info-Grow .infoArtBox article .image{background-repeat: no-repeat; background-size: cover; background-position: center; width: 33%; height: 195px; margin-right: 10px; margin-left: calc((100vw - 100%) / -2);}
+.sub-Info-Grow .infoArtBox article .image.i2{margin-left: 15px; margin-right: calc((100vw - 100%) / -2); height: 110px; width: 36%;}
+.sub-Info-Grow .infoArtBox article .texts{background-color: #fff; line-height: 20px; font-size: 14px; text-align: left; width: calc(100% / 4 * 3.5); word-break: keep-all;}
+.sub-Info-Grow .infoArtBox article h3{background-color: #fff; font-size: 14px; }
+.sub-Info-Grow .infoArtBox article p{padding: 10px 0px; font-size: 12.5px;}
+
+.infoinfobtnWrap {margin: 0 auto; width: 50%;margin-top: 30px;}
+.infoinfobtnWrap a{display: flex; justify-content: space-between; border: 1px solid #2c2c2c; text-align: center; height: 50px;border-radius: 10px; overflow: hidden;}
+.infoinfobtnWrap .infoBtn{text-transform: uppercase; position: relative; color: #000; font-weight: 700; transition: all 0.3s; z-index: 2;}
+.infoinfobtnWrap .infoBtn span{line-height: 45px; text-align: center; width: 100%;}
+.infoinfobtnWrap .infoBtn .arrow{width: calc(100% / 3 * 0.8); background-color: #000; background-size: 20px 20;}
+.infoinfobtnWrap .infoBtn .arrow img{width: 60%; margin: 0 auto; margin-top: 12px;}
+
+.infoBtn::before {content: ''; position: absolute; left: 0px; bottom:0px; z-index:-1; width: 100%; height:100%; background: transparent; box-shadow: inset 0px 0px 0px #004eff; display: block; -webkit-transition: all 0.2s cubic-bezier(.5, .24, 0, 1); transition: all 0.4s cubic-bezier(.5, .24, 0, 1)}
+.infoBtn:hover::before { box-shadow: inset 300px 0px 0px #004eff;}
+.infoinfobtnWrap .infoBtn:hover { color: #fff;}
+
+.sub-info-medal .container{text-align: center; word-break: keep-all;}
+.sub-info-medal .container p{font-size: 13px; padding: 0 10px;}
+.sub-info-medal .medalLine{padding: 10px; margin-top: 20px; display: flex; justify-content: space-between;}
+.sub-info-medal .medalLine .infoMedal{position: relative; height: 215px; outline: 1px solid #ddd; margin-top: 60px; border-radius: 10px; box-shadow: 0 0 5px 0 rgb(0 0 0 / 30%); width: 120px; margin: 0 5px;}
+.sub-info-medal .medalLine .infoMedal .image{width: 100%; background-repeat: no-repeat; background-size: contain; background-position: center; height: 90px; position: absolute; top: 0; left: 0; margin-top: 5px;}
+.sub-info-medal .medalLine .infoMedal .texts h4{padding-top: 100px;}
+.sub-info-medal .medalLine .infoMedal .texts h4:after{display: block; content:''; width: 75%; height: 2px; background-color: #ddd; margin: 0 auto; margin-top: 10px;}
+.sub-info-medal .medalLine .infoMedal .texts p{margin-top: 10px; line-height: 20px;}
+
+.blue-bg {background: #00cae2;}
+.TxtBlueBold{color: #004eff; font-weight: 600;}
+
+.info-slide {padding-left: 10px; display: flex; /* justify-content: space-between; */ flex-wrap: nowrap; overflow: visible;  overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; white-space: normal; -webkit-overflow-scrolling: touch;}
+.info-slide::-webkit-scrollbar{display:none;}
+
+.info-slide h6 {margin-top: 13px; margin-bottom: 5px; font-size: 16px; color: #2c2c2c;}
+.info-slide p {line-height: 1.3; word-break: keep-all;}
+.info-slide img {margin: 0 auto; width: 135px;}
+.info-slide .slide-box {min-height: 302px; margin: 0 7px; padding: 10px; background: #00c9e2; text-align: center;}
+</style>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+	<div id="wrap">
+		<!-- #include virtual = "/renewal2021/m/inc/gnb.asp"-->
+		<main class="sub">
+
+			<section class="centerinfoTop text-center pb60">
+				<div class="centerinfoTopTexts text-focus-in">
+					<h2 class="shadow-drop">Pioneer in the era of the
+						<br>4th Industrial Revolution
+					</h2>
+					<h4 class="page-desc">
+						KOREA IT ACADEMY
+					</h4>
+					<p>
+						코리아IT아카데미는 IT강국 대한민국의 IT교육을 선도하고
+						국가정책에 발맞춰 실무 중심의 커리큘럼과 4차 산업혁명을
+						선도하는 기술교육을 통해 미래IT 시장을 이끌어 갈
+						핵심인재를 양성하고 있습니다.
+					</p>
+				</div>
+				<div class="bgImage"></div>
+			</section>
+
+
+			<section>
+				<div class="container">
+					<ul class="secList pb20">
+						<li class="secDesc">
+							<div class="secDescText">
+								<h3>Leading information<br>
+									security and IT technology</h3>
+								<h4 class="TxtBlueBold">보안, IT기술을 선도하는 코리아IT아카데미</h4>
+								<p>
+									코리아IT아카데미는 최첨단 시설과
+									실무중심의 차별화된 교육프로그램을 중심으로 미래유망 직종인
+									빅데이터, 정보보안과 IT분야에 뛰어난 인재양성을 목표로 하는데 있습니다.
+									더불어 실무 현장에서 가장 필요로 하는 능력을 갖춘 인재를 양성,
+									체계적이고 세분화된 커리큘럼을 바탕으로 전문성을 갖춘 IT인재를 양성합니다.
+									그리고 바로 이점이 코리아IT아카데미의 선택해야 되는 이유입니다.
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<section>
+				<div class="container">
+					<div class="info-subLink pb50">
+						<ul>
+
+							<li>
+								<div class="linkWrap ">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_security.asp">Information Security</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_bigdata.asp">Big Data
+										Science</a>
+								</div>
+							</li>
+
+
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_server.asp">Server
+										Manager</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_network.asp">Network
+										administrator</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn"
+										href="/renewal2021/m/curriculum/curri_license.asp">Certificate</a>
+								</div>
+							</li>
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_skill.asp">Skill Up</a>
+								</div>
+							</li>
+
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_school.asp">Coding
+										instructor</a>
+								</div>
+							</li>
+							<li>
+								<div class="linkWrap">
+									<a class="info-subLinkBtn" href="/renewal2021/m/curriculum/curri_web.asp">Web / App
+										Development</a>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section>
+				<div class="sub-Info-Count pb60">
+					<div class="container">
+						<div class="count-Text-Top">
+							<h2>
+								<span class="TxtBlueBold">Overwhelming</span> <br>
+								Completion, Employment, Growth
+							</h2>
+						</div>
+
+						<div class="count-Texts">
+							<div class="cntText">
+								<h3><span class="counter">45</span>K</h3>
+								<p>2015~현재<br>
+									<span class="TxtBlueBold">45,000명 수료생</span> <br>배출
+								</p>
+							</div>
+
+							<div class="cntText">
+								<h3><span class="counter">89.9</span>%</h3>
+								<p>전지점 <br>평균 취업률<br>
+									<span class="TxtBlueBold">89.9% </span>달성
+								</p>
+							</div>
+
+
+							<div class="cntText">
+								<h3>0<span class="counter">7</span></h3>
+								<p><span class="TxtBlueBold">전국 직영점</span><br>
+									<span class="infoSmall">(강남, 신촌, 대구, 부산, 인천, 대전, 노원)</span>
+								</p>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+
+			<section>
+				<div class="container">
+					<div class="sub-Info-Grow pb60">
+						<h2>
+							Grew up with us to go
+						</h2>
+
+						<div class="infoArtBox">
+							<article>
+								<div class="image i1"
+									style="background-image: url('/renewal2021/m/img/academy/centerinfo_sec03_grow_01.png')">
+								</div>
+								<div class="texts">
+									<h3>4차 산업혁명 AI시대의 <span class="TxtBlueBold">선구자</span></h3>
+									<p>코리아IT아카데미는 실무 중심의 차별화된 교육 컨텐츠로
+										4차 산업혁명 시대의 유망 직종인 정보보안을 비롯한
+										다양한 IT분야 인재 양성을 목표로 하고 있습니다.
+										기초 양성과정부터 실무 직무능력 향상과정까지
+										체계적이고 세분화된 커리큘럼을 바탕으로 수료한
+										이미 수많은 수강생분들이 IT 취업전선에서
+										우리나라 IT업계의 큰 축이 되고 있습니다.</p>
+								</div>
+							</article>
+
+							<article>
+								<div class="texts">
+									<h3>검증 된 수강생들의 <span class="TxtBlueBold">경험</span></h3>
+									<p>체계적이고 전문적인 상담을 통해
+										진로를 결정하고, 학습방향을 설정하여
+										전문적이고 우수한 강사진들의 교육으로
+										코리아IT아카데미는 성장하고 발전하고 있습니다.</p>
+								</div>
+								<div class="image i2"
+									style="background-image: url('/renewal2021/m/img/academy/centerinfo_sec03_grow_02.png')">
+								</div>
+							</article>
+
+
+							<article>
+								<div class="image i3"
+									style="background-image: url('/renewal2021/m/img/academy/centerinfo_sec03_grow_03.png')">
+								</div>
+								<div class="texts">
+									<h3>대한민국 IT의 <span class="TxtBlueBold">중심</span></h3>
+									<p>IT의 강국 대한민국, 4차 산업혁명 시대에 IT교육은
+										선택이 아닌 필수가 되었습니다. 코리아IT아카데미는
+										최첨단 시설과 실무자 중심의 강사진으로 IT 교육을
+										선도하고 있으며, 정보화 시대의 인재로서 가져야 하는
+										전문 교육으로 훌륭한 인재를 배출하고 있습니다.
+										지금 여러분은 출발선에 있습니다. IT전문가로서
+										대한민국을 이끌어갈 여러분들의 열정과 노력이
+										헛되지 않도록, 코리아IT아카데미가 함께 하겠습니다.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<section class="info-list pb60">
+				<div class="info-slide">
+					<div class="slide-box">
+						<div class="img-wrap">
+							<img src="/renewal2021/m/img/academy/info_feature01.png" alt="project">
+						</div>
+						<h6>학과별 전임강사제도</h6>
+						<p>
+							주요학과에 전임강사진을 배치하여
+							교육완성도를 높이고, 철저한 관리를
+							통해 교육만족도를 높이고 있습니다.
+						</p>
+					</div><!-- //slide-box -->
+					<div class="slide-box">
+						<div class="img-wrap">
+							<img src="/renewal2021/m/img/academy/info_feature02.png" alt="project">
+						</div>
+						<h6>멘토의 1:1관리제도</h6>
+						<p>
+							수강생 별 1:1 멘토를 배치해 학원 생활
+							관리와 진로, 진학, 취업에 대한
+							체계적인 시스템을 구축합니다.
+						</p>
+					</div><!-- //slide-box -->
+					<div class="slide-box">
+						<div class="img-wrap">
+							<img src="/renewal2021/m/img/academy/info_feature03.png" alt="project">
+						</div>
+						<h6>취업을 위한 컨설팅</h6>
+						<p>
+							상시 취업 상담이 가능한 취업지원센터를
+							운영해 이력서 교정, 모의면접 등
+							취업에 핵심 기술을 전달합니다.
+						</p>
+					</div><!-- //slide-box -->
+					<div class="slide-box">
+						<div class="img-wrap">
+							<img src="/renewal2021/m/img/academy/info_feature04.png" alt="project">
+						</div>
+						<h6>실무중심의 커리큘럼</h6>
+						<p>
+							정보보안 과정과 IT과정의 연계하여
+							실무 중심으로 커리큘럼을 구상해
+							수업을 진행하고 있습니다.
+						</p>
+					</div><!-- //slide-box -->
+					<div class="slide-box">
+						<div class="img-wrap">
+							<img src="/renewal2021/m/img/academy/info_feature05.png" alt="project">
+						</div>
+						<h6>1:1학습지원 학습조교운영</h6>
+						<p>
+							수강생 분들의 어려운을 돕고자
+							원내 근로 장학생을 선발해 학습
+							조교제도를 운영하고 있습니다.
+						</p>
+					</div><!-- //slide-box -->
+				</div>
+				<div class="infoinfobtnWrap">
+					<a href="/renewal2021/m/customer/center_fit.asp" class="infoBtn">
+						<span>내게 맞는 과정 찾기</span>
+						<div class="arrow"><img src="/renewal2021/img/academy/centerinfo_sec03_arrow.png" alt=""></div>
+					</a>
+				</div>
+			</section>
+
+
+			<section>
+				<div class="sub-info-medal">
+					<div class="container">
+						<h2 class="blue-border">Makes Korea IT</h2><br>
+						<h2 class="blue-border mb30">industry leader</h2>
+						<p>코리아IT아카데미는 국내 IT산업의 경쟁력 강화와
+							IT업계의 Needs에 부합하는 현장 수요중심의 인재양성을 위해
+							체계적이고 질높은 교육과 최상의 교육서비스를 제공하는
+							국내 최고의 IT전문교육기관이 되도록 노력하겠습니다.</p>
+
+				
+						<div class="info-Medals">
+							<div class="scrollBox">
+								<ul class="medalLine">
+									<li class="infoMedal">
+										<div class="image i1"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal01.png')">
+										</div>
+										<div class="texts">
+											<h4>2019 강남캠퍼스</h4>
+											<p>
+												<span class="TxtBlueBold">3년 인증 우수</span><br>
+												훈련기관 선정
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i2"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal02.png')">
+										</div>
+										<div class="texts">
+											<h4>2020 신촌캠퍼스</h4>
+											<p>
+												<span class="TxtBlueBold">5년 인증 우수</span><br>
+												훈련기관 선정
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i3"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal03.png')">
+										</div>
+										<div class="texts">
+											<h4>2021 대구캠퍼스</h4>
+											<p>
+												<span class="TxtBlueBold">5년 인증 우수</span><br>
+												훈련기관 선정
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i4"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal04.png')">
+										</div>
+										<div class="texts">
+											<h4>2021 강남캠퍼스</h4>
+											<p>
+												<span class="TxtBlueBold">훈련 이수자 평가</span><br>
+												A등급 획득
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i5"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal04.png')">
+										</div>
+										<div class="texts">
+											<h4>2022 신촌캠퍼스</h4>
+											<p>
+												<span class="TxtBlueBold">훈련 이수자 평가</span><br>
+												A등급 획득
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i1"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal06.png')">
+										</div>
+										<div class="texts">
+											<h4>7년 연속</h4>
+											<p>
+												<span class="TxtBlueBold">대한민국 <br>교육브랜드 대상</span><br>
+												정보보안·IT 교육
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i2"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal07.png')">
+										</div>
+										<div class="texts">
+											<h4>4년 연속</h4>
+											<p>
+												<span class="TxtBlueBold">대한민국 <br>브랜드스타 대상</span><br>
+												학원교육서비스
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i3"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal08.png')">
+										</div>
+										<div class="texts">
+											<h4>5년 연속</h4>
+											<p>
+												<span class="TxtBlueBold">올해의 <br>브랜드 대상</span><br>
+												취업교육서비스
+											</p>
+										</div>
+									</li>
+
+									<li class="infoMedal">
+										<div class="image i4"
+											style="background-image: url('/renewal2021/img/academy/centerinfo_sec0_medal09.png')">
+										</div>
+										<div class="texts">
+											<h4>4년 연속</h4>
+											<p>
+												<span class="TxtBlueBold">퍼스트브랜드 대상</span><br>
+												취업교육서비스
+											</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- #include virtual = "/renewal2021/m/inc/footer.asp"-->
+		<!-- $(".info-Medals").endlessScroll({ width: '100%', height: '200px', steps: -1, speed: 10, mousestop: true }); -->
+	</div>
+
+
+	<script type="text/javascript">
+		$('.counter').counterUp({
+			delay: 10,
+			time: 2000,
+		});
+
+		$('.info-Medals').endlessScroll({ width: '100%', height: '250px', steps: -1, speed: 10, mousestop: false });
+	</script>
+
+</body>
+</html>
